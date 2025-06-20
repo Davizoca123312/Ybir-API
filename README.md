@@ -94,11 +94,4 @@ python app.py
 
 ---
 
-## 📬 Contato
-
-Desenvolvido por Isaac Estevan Geuster  
-📧 Email: isaacegeuster@gmail.com
-
----
-
 > “Ybyrá”, do tupi-guarani: **árvore**, símbolo de vida e conexão — como os sentimentos que conectam as pessoas.
