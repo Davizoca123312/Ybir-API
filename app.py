@@ -26,17 +26,19 @@ async def analyze(request: AnalyzeRequest):
     if not request.text or not request.text.strip():
         raise HTTPException(status_code=400, detail="Campo 'text' obrigatório")
     try:
-        emotion, confidence, all_emotions = analyze_emotions(request.text)
-        save_analysis(emotion)
+        emotion, confidence, all_emotions, explanation = analyze_emotions(request.text)
+        save_analysis(request.text, emotion, confidence, explanation)  # Passa o texto aqui
         return {
             "emotion": emotion,
             "confidence": confidence,
             "all_emotions": all_emotions,
+            "explanation": explanation,
             "message": "Análise concluída com sucesso"
         }
     except Exception as e:
         print("Erro no /analyze:", e)
         raise HTTPException(status_code=500, detail=str(e))
+
 
 @app.get("/", response_class=HTMLResponse)
 async def dashboard():
