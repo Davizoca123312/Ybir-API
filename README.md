@@ -82,8 +82,8 @@ Content-Type: application/json
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/ybyraapi.git
-cd ybyraapi
+git clone 
+cd Ybir-API https://github.com/Davizoca123312/Ybir-API
 
 # Instale dependências
 pip install -r requirements.txt
